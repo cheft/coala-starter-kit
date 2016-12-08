@@ -1,0 +1,37 @@
+{
+  "name": "coala-starter-kit",
+  "version": "0.0.1",
+  "description": "coala.js starter kit",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --colors --content-base ./ --hot --host 0.0.0.0",
+    "build": "webpack -p"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cheft/coala-starter-kit.git"
+  },
+  "keywords": [
+    "coala",
+    "dot"
+  ],
+  "author": "cheft",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cheft/coala-starter-kit/issues"
+  },
+  "homepage": "https://github.com/cheft/coala-starter-kitr#readme",
+  "dependencies": {
+    "coala": "1.0.0-beta",
+    "jquery": "^1.12.4",
+    "todomvc-app-css": "^2.0.6"
+  },
+  "devDependencies": {
+    "coala-dot-loader": "^0.0.1",
+    "css-loader": "^0.18.0",
+    "style-loader": "^0.12.4",
+    "uglifyjs": "^2.4.10",
+    "webpack": "^1.12.1",
+    "webpack-dev-server": "^1.10.1"
+  }
+}
