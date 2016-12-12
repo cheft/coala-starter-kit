@@ -3,10 +3,10 @@ var path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
-  devtool: 'source-map',
+  // devtool: 'source-map',
   entry: {
     app: [
-      'webpack/hot/dev-server',
+      // 'webpack/hot/dev-server',
       path.resolve('./src/app.js')
     ]
   },

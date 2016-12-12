@@ -27,7 +27,7 @@
     "todomvc-app-css": "^2.0.6"
   },
   "devDependencies": {
-    "coala-dot-loader": "^0.0.1",
+    "coala-dot-loader": "^0.0.2",
     "css-loader": "^0.18.0",
     "style-loader": "^0.12.4",
     "uglifyjs": "^2.4.10",

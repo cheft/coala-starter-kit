@@ -1,33 +1,33 @@
 <section class="todoapp">
   <header class="header">
-    <h1>{{=it.title}}</h1>
-    <input class="new-todo" autofocus autocomplete="off" placeholder="What needs to be done?" value="{{=it.newTodo}}">
+    <h1>{{=data.title}}</h1>
+    <input class="new-todo" autofocus autocomplete="off" placeholder="What needs to be done?" value="{{=data.newTodo}}">
   </header>
   <section class="main" v-show="todos.length">
-    <input class="toggle-all {{?it.todos.length === 0}}hidden{{?}}" type="checkbox" {{?it.allDone}}checked{{?}}>
+    <input class="toggle-all {{?data.todos.length === 0}}hidden{{?}}" type="checkbox" {{?data.allDone}}checked{{?}}>
     <ul class="todo-list">
-      {{~it.viewTodos :value :index}}
-      <li class="todo{{?value.completed}} completed{{?}}{{?value.id==it.editTodo.id}} editing{{?}}" id="{{=value.id}}">
+      {{~data.viewTodos :value :index}}
+      <li class="todo{{?value.completed}} completed{{?}}{{?value.id==data.editTodo.id}} editing{{?}}" id="{{=value.id}}">
         <div class="view">
           <input class="toggle" type="checkbox" {{?value.completed}}checked{{?}}>
           <label>{{=value.title}}</label>
           <button class="destroy"></button>
         </div>
-        <input class="edit" type="text" value="{{=it.editTodo.title}}">
+        <input class="edit" type="text" value="{{=data.editTodo.title}}">
       </li>
       {{~}}
     </ul>
   </section>
-  <footer class="footer {{?it.todos.length === 0}}hidden{{?}}">
-    <span class="todo-count {{?it.count <= 0}}hidden{{?}}">
-      <strong>{{=it.count}}</strong> 项未完成
+  <footer class="footer {{?data.todos.length === 0}}hidden{{?}}">
+    <span class="todo-count {{?data.count <= 0}}hidden{{?}}">
+      <strong>{{=data.count}}</strong> 项未完成
     </span>
     <ul class="filters">
-      <li><a href="#/all" class="{{?it.visibility == 'all'}}selected{{?}}">全部</a></li>
-      <li><a href="#/active" class="{{?it.visibility == 'active'}}selected{{?}}">未完成</a></li>
-      <li><a href="#/completed" class="{{?it.visibility == 'completed'}}selected{{?}}">完成</a></li>
+      <li><a href="#/all" class="{{?data.visibility == 'all'}}selected{{?}}">全部</a></li>
+      <li><a href="#/active" class="{{?data.visibility == 'active'}}selected{{?}}">未完成</a></li>
+      <li><a href="#/completed" class="{{?data.visibility == 'completed'}}selected{{?}}">完成</a></li>
     </ul>
-    <button class="clear-completed {{?it.todos.length - it.count <= 0}}hidden{{?}}">
+    <button class="clear-completed {{?data.todos.length - data.count <= 0}}hidden{{?}}">
       删除完成项
     </button>
   </footer>
