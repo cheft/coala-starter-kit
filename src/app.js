@@ -1,3 +1,6 @@
+require('todomvc-app-css/index.css')
+window.$ = require('jquery')
+
 var coala = require('coala')
 var todo = require('./components/todo.html')
 
@@ -9,4 +12,4 @@ coala.router({
 			coala.todoMVC.trigger('filter', status)
 		}
 	}
-});
+})
