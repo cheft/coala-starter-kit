@@ -4,8 +4,8 @@
   "description": "coala.js starter kit",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --hot",
-    "build": "rm -rf dist && webpack --config webpack.prd.js --optimize-minimize"
+    "start": "webpack-dev-server --hot --colors --config build/webpack.dev.js",
+    "build": "rm -rf dist & webpack --optimize-minimize --config build/webpack.prd.js"
   },
   "repository": {
     "type": "git",
@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/cheft/coala-starter-kitr#readme",
   "dependencies": {
-    "coala": "1.0.0-beta.5",
+    "coala": ">= 1.0.0-beta.1 < 2.0.0",
     "jquery": "^3.2.1",
     "todomvc-app-css": "^2.0.6"
   },
@@ -30,10 +30,10 @@
     "coala-dot-loader": "^0.0.3",
     "css-loader": "^0.18.0",
     "extract-text-webpack-plugin": "^2.1.0",
-    "file-loader": "^0.11.1",
+    "file-loader": "^0.10.1",
     "html-webpack-plugin": "^2.28.0",
     "style-loader": "^0.12.4",
-    "webpack": "^2.3.3",
-    "webpack-dev-server": "^2.4.2"
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^1.10.1"
   }
 }

@@ -35,13 +35,13 @@
 <footer class="info"></footer>
 
 <script>
-var store = require('../store')
+var store = require('../utils/store')
 
 module.exports = {
   refs: {
     footer: {
       el: '.info',
-      component: require('./footer.html')
+      component: require('../components/footer.html')
     }
   },
   data: {

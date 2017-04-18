@@ -2,7 +2,7 @@ require('todomvc-app-css/index.css')
 window.$ = require('jquery')
 
 var coala = require('coala')
-var todo = require('./components/todo.html')
+var todo = require('./pages/todo.html')
 
 coala.todoMVC = coala.mount(todo, '#app')
 

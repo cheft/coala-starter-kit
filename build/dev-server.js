@@ -1,8 +1,6 @@
-var config = require('./webpack.prd')
-
-config.devtool = 'eval'
-
-config.devServer = {
+// dev server，定义反向代理
+const devServer = {
+  hot: true,
   historyApiFallback: true,
   host: '0.0.0.0',
   port: 8080,
@@ -13,13 +11,14 @@ config.devServer = {
   headers: { 'X-My-Header': '^_^' }, //自定义返回头
   proxy: {
     '/api/*': {
-      target: 'https://api.github.com/',
       changeOrigin: true,
+      
+      target: 'http://172.16.72.56:3000',
       pathRewrite: { // 根据实际情况配置是否需要重写 url
         '^/api': ''
       }
     }
   }
-}
+};
 
-module.exports = config
+module.exports = devServer
